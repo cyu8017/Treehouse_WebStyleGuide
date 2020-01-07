@@ -1,0 +1,13 @@
+// Base styles for Web Style Guide Project
+
+* {
+    color: $font-color; 
+}
+
+a {
+    @extend %link; 
+}
+
+ul {
+    list-style: none; 
+}

@@ -1,0 +1,37 @@
+// Styles for Navigation Panel 
+
+.nav {
+    @include flexy($dir: column); 
+    @extend %centering; 
+    padding-inline-start: 0; 
+
+    @include mq(desktop) {
+        @include flexy($dir: row); 
+    }
+}
+
+.nav__item {
+    width: 80%; 
+    text-align: center; 
+    padding: 15px 10px; 
+    border-radius: 5px;
+    font-family: $font-main; 
+    font-size: $font-size-h2;  
+
+    &:hover {
+        @extend %theme-bground; 
+    }; 
+
+    &:hover a {
+        color: $white; 
+    }
+
+    @include mq(desktop) {
+        flex-basis: 100px; 
+        font-size: 1.3rem; 
+    }
+}
+
+.grid__col--9 {
+    width: 100%; 
+}

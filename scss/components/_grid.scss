@@ -1,0 +1,134 @@
+.container {
+    @include flexy($dir: column); 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.grid__row {
+    @include flexy($align: center); 
+    justify-content: center;
+    width: 100%;
+}
+
+.grid__row p {
+    width: 85%; 
+    margin: auto; 
+    line-height: 1.5em;
+}
+
+.grid__col--12 {
+    .card {
+        p {
+            padding-top: 30px;
+            font-family: $font-main;
+        }
+    }
+}
+
+div[class*="theme_colors"] {
+    border-radius: 5px;
+    font-family: $font-main; 
+    padding: 10px 0px 10px 10px; 
+    margin: 3px 0; 
+    width: 95%;
+
+    &.grid__col--12 {
+        background-color: $lighter-green; 
+    }
+
+    &.grid__col--8 {
+        background-color: $light-orange; 
+        justify-content: flex-start;
+    }
+
+    &.grid__col--7 {
+        background-color: $light-red;
+    }
+
+    &.grid__col--6 {
+        background-color: $dark-blue;
+    }
+
+    &.grid__col--5 {
+        background-color: $light-green; 
+    }
+
+    &.grid_col--4 {
+        background-color: $light-blue; 
+    }
+
+    &.grid_col--3 {
+        background-color: $light-green; 
+    }
+}
+
+.grid {
+    &__row {
+        padding: 1em 10px; 
+        display: flex; 
+        flex-direction: column;
+    }
+
+    @media (min-width: 768px) {
+        flex-direction: row; 
+    }
+}
+
+&__col {
+    @for $i from 1 through 12 {
+        &--#{$i} {
+            margin-top: 10px; 
+            flex-basis: 100%;
+
+            @include mq(desktop) {
+                margin-top: 0; 
+                flex-basis: #{$i / 12 * 100 + "%"};
+            }
+        }
+    }
+}
+
+[class^=grid__col] {
+    & + & {
+        @include mq(desktop) {
+            margin-left: 10px; 
+        }
+    }
+}
+
+@include mq(desktop) {
+
+    .grid__col--6 {
+      @include flexy($align: center);
+      justify-content: center;
+      }
+
+    .grid__row > .grid__col--12 {
+      @include flexy($dir: row);
+      justify-content: space-around;
+    }
+
+    .grid__col-- {
+      &4,
+      &5,
+      &7 {
+        text-align: center;
+      }
+
+    }
+
+    div[class*="theme__colors"] {
+      &.grid__col--3,
+      &.grid__col--8 {
+        justify-content: center;
+      }
+    }
+
+    .grid__row {
+      width: 90%;
+    }
+
+
+  }
+
+  

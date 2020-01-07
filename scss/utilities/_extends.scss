@@ -1,0 +1,22 @@
+%link {
+	text-decoration: none;
+	color: $font-color;
+
+	&:visited {
+		color: $font-color;
+	}
+}
+
+%img-size {
+	width: 200px;
+	margin-top: 15px;
+}
+
+%theme-bground {
+	background-color: $main-color;
+}
+
+%centering {
+	align-items: center;
+	justify-content: center;
+}

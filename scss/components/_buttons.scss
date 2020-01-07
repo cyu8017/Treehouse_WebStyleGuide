@@ -1,0 +1,45 @@
+button[class*="btn"] {
+    font-family: $font-main; 
+    width: 100%; 
+    border: none; 
+    margin-top: 20px; 
+    padding: 10px; 
+    border-radius: 5px; 
+    text-transform: uppercase;
+    color: $white; 
+    font-weight: bold; 
+    transition: transform ease-out 500ms; 
+
+    &:hover {
+        outline: none;
+        transform: translate3d(2px, -3px, 0);
+        cursor: pointer; 
+    }
+}
+
+.btn-- {
+    
+    &default {
+        background-color: $secondary-color; 
+    }
+
+    &success {
+        background-color: $theme-green; 
+    }
+
+    &error {
+        background-color: $theme-red; 
+    }
+
+    &warning {
+        background-color: $theme-orange;
+    }
+
+    &info {
+        background-color: $theme-purple;
+        margin-bottom: 30px;
+    }
+}
+
+// https://github.com/Zach-Savage/Web-Style-Guide/blob/master/scss/components/_buttons.scss
+
