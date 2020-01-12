@@ -1,15 +1,15 @@
 // Colors
-$black: #000; 
-$white: #fff; 
-$main-color: #67d0ad; 
+$black: #000;
+$white: #fff;
+$main-color: #67d0ad;
 $secondary-color: lighten(#33CEFF, 2);
 $light-green: lighten($theme-green, 15%);
 $lighter-green: lighten($theme-green, 25%);
 $light-red: lighten($theme-red, 10%);
-$light-blue: lighten(#3dd0ff, 25%);  
+$light-blue: lighten(#3dd0ff, 25%);
 $light-purp: lighten($theme-purple, 35%);
 $light-orange: lighten($theme-orange, 15%);
-$dark-blue: darken(#3dd0ff, 25%); 
+$dark-blue: darken(#3dd0ff, 25%);
 
 // Theme Colors
 $theme-green: #3cb371;
