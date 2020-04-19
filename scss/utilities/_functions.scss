@@ -1,0 +1,16 @@
+@function px($target, $context: $base-font-size) {
+    @return ($target / $context) * 1em;
+}
+
+@function percentage($target, $context) {
+    @return ($target / $context) * 100%;
+}
+
+@function palette($palette, $shade: "base") {
+    @return map-get(map-get($color-palettes, $palette), $shade);
+}
+
+@function g-context($g-col-width, $g-col-count, $g-gutter-width) {
+    $g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * ($g-col-count - 1));
+    @return $g-context;
+}

@@ -1,37 +1,27 @@
-// Styles for Navigation Panel 
-
 .nav {
-    @include flexy($dir: column); 
-    @extend %centering; 
-    padding-inline-start: 0; 
-
-    @include mq(desktop) {
-        @include flexy($dir: row); 
-    }
-}
-
-.nav__item {
-    width: 80%; 
-    text-align: center; 
-    padding: 15px 10px; 
-    border-radius: 5px;
-    font-family: $font-main; 
-    font-size: $font-size-h2;  
-
-    &:hover {
-        @extend %theme-bground; 
-    }; 
-
-    &:hover a {
-        color: $white; 
+    @extend %centered;
+    padding: 0 0 px(70px, 16px);
+    margin: 0;
+    @include mq(medium) {
+        @include flex(flex, row, $just: space-around);
+        width: 60%;
+        margin: px(65px) 0 0 px(200px);
     }
 
-    @include mq(desktop) {
-        flex-basis: 100px; 
-        font-size: 1.3rem; 
-    }
-}
+    @include e(item) {
+        border-radius: 5px;
+        padding: px(12px) px(10px);
 
-.grid__col--9 {
-    width: 100%; 
+        a {
+            @extend %text-dec-none;
+            color: black;
+        }
+
+        &:first-child {
+            background-color: $primary-color;
+            a {
+                color: $white;
+            }
+        }
+    }
 }

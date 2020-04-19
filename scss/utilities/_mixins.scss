@@ -1,19 +1,50 @@
-@mixin flexy ($disp: flex, $dir: null, $wrap: null, $just: null, $align: null) {
-    display: $disp; 
+@mixin e($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+@mixin m($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+@mixin flex ($display: flex, $dir: null, $wrap: null, $just: null){
+    display: $display;
     flex-direction: $dir;
     flex-wrap: $wrap;
     justify-content: $just;
-    align-items: $align; 
+    @content;
+}
+
+@mixin grid-background-color {
+    @each $color in $grid-colors {
+        $index: index($grid-colors, $color);
+
+        &--#{$index}.theme__colors {
+            background-color: $color;
+        }
+    }
 }
 
 @mixin mq($break) {
-    @if $break == 'desktop' {
-        @media (min-width: $desktop) {
-            @content; 
+    @if $break == "small" {
+        @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+            @content;
         }
     }
-
+    @else if $break == "medium" {
+        @media (min-width: $brkpoint-md) {
+            @content;
+        }
+    }
+    @else if $break == "large" {
+        @media (min-width: $brkpoint-lg) {
+            @content;
+        }
+    }
     @else {
-        @error "Value for '#{$break}' was not valid or was not found. ";
+        @error "No value could be retrieved for #{$break}";
     }
 }
