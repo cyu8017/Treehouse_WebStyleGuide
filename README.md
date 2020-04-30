@@ -44,3 +44,24 @@ To complete this project, follow the instructions below:
 - Move styles into components: 
     - Transfer the remaining CSS into their respective components. For example, any class selectors that begin with grid, column, or rows could go in the grid component. 
     - Be sure to update any styles that use color with the Sass variables you created in the previous step.  
+
+- Check your work 
+    - Double check all of your work, click on the "How you will be graded" tab above and compare your project to the rubrics listed there. Post your project in the #review-my-project channel so that the rest of the community can see your awesome project and give feedback before submitting.
+    
+### Extra Credit 
+
+- Create a media query mixin that creates a media query inside of the selector that calls the mixin. 
+    - The mixin should accept a single parameter for the size of the media query breakpoint. 
+    - The mixin should create a min-width media query only. 
+ 
+- Use the media query mixin for all media queries. 
+
+- Use a nested selector structure for at least one component. 
+    - Create a base selector for a group of related styles. 
+    - Inside of that selector, use the Sass parent selector: & to append a child class selector to the base. An example would be in the navigation component use .nav as the base selector, and nest .nav-link inside of it. 
+
+- Use built in Sass function to add hover effect. 
+    - Created a hover effect for buttons. 
+    - For the effect, lighten the button's background color by 15%; 
+    - ADd a CSS transition so that the color change fades in. 
+ 
