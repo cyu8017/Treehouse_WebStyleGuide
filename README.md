@@ -2,6 +2,10 @@
 
 In this project, we've provided complted index.html and styles.css files. You will be resonsible for converting the CSS into Sass by splitting the code into several Sass partial files. You will also look for repeated values (length units, colors, etc.) throughout the CSS and store them in Sass variables. After completing the project, you'll have a useful Sass micro-framework to quickly prototype other websites. 
 
+### Befor you start
+
+### Project Instructions 
+
 To complete this project, follow the instructions below:
 
 - Structure your folders: 
