@@ -2,7 +2,14 @@
 
 In this project, we've provided complted index.html and styles.css files. You will be resonsible for converting the CSS into Sass by splitting the code into several Sass partial files. You will also look for repeated values (length units, colors, etc.) throughout the CSS and store them in Sass variables. After completing the project, you'll have a useful Sass micro-framework to quickly prototype other websites. 
 
-### Befor you start
+### Before you start
+
+To prepare for this project you'll need to make sure you complete and understand these steps. 
+
+- Download the project files. 
+- Inside you will find an index.html file, an 'images' folder and a 'resources' folder that contains an index.html file and a 'css' folder with styles.css and normalize.css files. The styles.css will serve as a guide for creating your Sass. 
+
+You should already have Sass installed locally on your computer, and be comfortable running Sass commands from the terminal. 
 
 ### Project Instructions 
 
